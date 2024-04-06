@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rezerwacja</title>
+</head>
+<body>
+<form  action="rezerwacja.php" method="post">
+    wybierz ilość gości
+    <select name="liczba_gosci" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select> </br>
+    podaj dane osoby rezerwującej pobyt
+    Imię <input type="text" name="imie" required> </br>
+    Nazwisko <input type="text" name="nazwisko" required></br>
+    E-mail <input type="email" name="email" required></br>
+    Adres <input type="text" name="adres" required></br>
+    numer karty kredytowej <input type="text" name="numer_karty" pattern="[0-9]{16}" title="numer karty musi miec 16 znakow" required></br>
+    data przyjazdu <input type="date" name="data_przyjazdu" required></br>
+    data wyjazdu <input type="date" name="data_wyjazdu"required></br>
+    godzina przyjazdu <input type="time" name="godzina_przyjazdu"required></br>
+    Potrzebujesz aby dostawić łóżko dla dziecka? </br>
+    <input type="radio" name="dodatkowe_lozko" value="tak"> tak
+    <input type="radio" name="dodatkowe_lozko" value="nie"> nie </br>
+    Dodatkowe udogodnienia:</br>
+    <input type="checkbox" name="udogodnienia[]" value="popielniczka"> popielniczka </br>
+    <input type="checkbox" name="udogodnienia[]" value="klimatyzacja"> klimatyzacja </br>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['liczba_gosci']) && $_POST['liczba_gosci']>1) {
+    for ($i = 2; $i <= $_POST['liczba_gosci']; $i++) {
+    echo "<h2>Dane dla gościa $i</h2>";
+    echo "Imię <input type='text' name='imie[]' required> </br>";
+    echo "Nazwisko <input type='text' name='nazwisko[]' required></br>";
+    }
+    }
+    ?>
+    <input type="submit" value="zatwierdź rezerwację">
+</form>
+</body>
+</html>

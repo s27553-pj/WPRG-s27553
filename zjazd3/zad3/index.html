@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>odczyt pliku</title>
+</head>
+<body>
+<form action="form.php" method="POST">
+    <label>Ścieżka:</label>
+    <input type="text" name="path" required><br>
+    <label>Nazwa katalogu:</label>
+    <input type="text" name="directory" required><br>
+    <label>Operacja:</label>
+    <select name="operation">
+        <option value="read">Odczyt</option>
+        <option value="create">Utwórz</option>
+        <option value="delete">Usuń</option>
+    </select><br>
+    <input type="submit" value="Wykonaj">
+</form>
+</body>
+</html>

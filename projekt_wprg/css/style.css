@@ -1,0 +1,8 @@
+body {
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+.jumbotron {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    color: black;
+}

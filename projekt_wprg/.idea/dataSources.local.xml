@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PS-233.15026.12">
+    <data-source name="s27553@szuflandia.pjwstk.edu.pl" uuid="e8ad6e2e-bcd1-4d54-8505-6a2619c08ec9">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>s27553</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
